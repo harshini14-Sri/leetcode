@@ -5,7 +5,11 @@ class Solution {
             char[] arr=str.toCharArray();
             Arrays.sort(arr);
             String st=new String(arr);
-            mp.putIfAbsent(st,new ArrayList<>());
+            // mp.putIfAbsent(st,new ArrayList<>());
+            // mp.get(st).add(str);
+            if(!mp.containsKey(st)){
+                mp.put(st,new ArrayList<>());
+            }
             mp.get(st).add(str);
         }
         return new ArrayList<>(mp.values());
