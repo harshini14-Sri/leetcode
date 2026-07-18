@@ -22,7 +22,7 @@ class Solution {
                 cost+=e.w;
                 System.out.println(e.w);
                 select++;
-                if(select==points.length-1) break;
+                // if(select==points.length-1) break;
             }
         }
         return cost;
